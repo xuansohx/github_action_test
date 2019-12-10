@@ -17,7 +17,7 @@ jobs: # 무엇을 해야하는지 정의
           architecture: 'x64'
       
       - name : Install pip requests # add build
-        run: 
+        run: |
           python -m pip install --upgrade pip
           pip install requests
       - run: python actions/update_lotto.py
