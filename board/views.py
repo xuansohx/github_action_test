@@ -20,5 +20,4 @@ def fetch_lotto(request):
         no=data['drwNo'],
         win_amount=data['firstWinamnt'],
     )
-    return_json = serializers.serialize(g)
     return JsonResponse({'status':200}) # 내보내기
