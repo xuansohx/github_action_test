@@ -1,23 +1,23 @@
-# .github/workflows/main.yaml
-name: update-lotto-data
-on: 
-  schedule:
-    - cron: '* * * * *' 
-    # '*' 다섯 개는 1분에 한 번 (M/H/D/M/Y)
-    # 0 20 * * 6 (-> 토요일 저녁 8시 마다)
+# # .github/workflows/main.yaml
+# name: update-lotto-data
+# on: 
+#   schedule:
+#     - cron: '* * * * *' 
+#     # '*' 다섯 개는 1분에 한 번 (M/H/D/M/Y)
+#     # 0 20 * * 6 (-> 토요일 저녁 8시 마다)
 
-jobs: # 무엇을 해야하는지 정의
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master # master branch의 actions/를 봐주세요
-      - uses: actions/setup-python@v1
-        with: 
-          python-version: '3.7.*' # github이 지원하는 버전
-          architecture: 'x64'
+# jobs: # 무엇을 해야하는지 정의
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@master # master branch의 actions/를 봐주세요
+#       - uses: actions/setup-python@v1
+#         with: 
+#           python-version: '3.7.*' # github이 지원하는 버전
+#           architecture: 'x64'
       
-      - name : Install pip requests # add build
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests
-      - run: python actions/update_lotto.py
+#       - name : Install pip requests # add build
+#         run: |
+#           python -m pip install --upgrade pip
+#           pip install requests
+#       - run: python actions/update_lotto.py
